@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function() {
+            // Define the number of times to replicate the key press
+            const numberOfRepeats = 5;
+
+            // Simulate the key press action
+            for (let i = 0; i < numberOfRepeats; i++) {
+            simulateKeyPress();
+            }
+        };
+
+        function simulateKeyPress() {
+            const event = new KeyboardEvent("keydown", {
+            key: "-",
+            code: "Minus",
+            ctrlKey: true,
+            bubbles: true,
+            });
+            
+            document.dispatchEvent(event);
+        }
+    </script>
+
+    <title>Chandra Prakash</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header" class="animate__fadeIn">
+        <nav>
+            <a href="#" class="logo">
+                <img src="images\logo.png" alt="logo">
+            </a>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-heading">
+            <h4>Hi! Are You Looking For a Programmer</h4>
+            <h1>I'm <span>Chandra</span> Prakash</h1>
+            <p>Welcome to my website! I'm a passionate programmer ready to bring your ideas to life.</p>
+            <a href="#contact" class="header-btn">Contact</a>
+        </div>
+    </section>
+    <section id="about" class="animate__fadeIn">
+        <div class="about-img">
+            <img src="images\about.png" alt="about">
+        </div>
+        <div class="about-text">
+            <h2>Web <span>Web Developer</span> Profesional</h2>
+            <h3>I Am a Talented Web Developer With a Team </h3>
+            <p>I have years of experience in web development and a dedicated team to help me deliver exceptional results. Let's create something amazing together!</p>
+            <button onclick="location.href='https://github.com/ChandraPrakash24'" class="header-btn">Read More</button>
+        </div>
+    </section>
+
+    <section id="work" class="animate__fadeIn">
+        <div class="work-heading">
+            <h1>My Previous Work</h1>
+            <p>Take a look at some of the projects I've worked on. Each one is a testament to my skills and dedication.</p>
+        </div>
+        <div class="work-container">
+
+            <div class="work-box">
+                <div class="work-img">
+                    <img src="images\work-3.png" alt="work1">
+                </div>
+
+                <div class="work-text">
+                    <h4>Web Devlopment</h4>
+                    <p>Dynamic weather app experience the power of a well-crafted website. I specialize in engaging and user-friendly web solutions.</p>
+                    <a href="https://storm-weaver.onrender.com/" class="header-btn">DEMO</a>
+                </div>
+            </div>
+
+            <div class="work-box">
+                <div class="work-img">
+                    <img src="images\work-2.png" alt="work1">
+                </div>
+                <div class="work-text">
+                    <h4>TODO App</h4>
+                    <p>Managing your task has never been easier. I can build custom efficent task managment systems that tailored to your needs.</p>
+                    <a href="https://chandraprakash24.github.io/Todo-crud/" class="header-btn">DEMO</a>
+                </div>
+            </div>
+
+            <div class="work-box">
+                <div class="work-img">
+                    <img src="images\work-1.png" alt="work1">
+                </div>
+
+                <div class="work-text">
+                    <h4>Ecommerce Devlopment</h4>
+                    <p>Unlock the potential of online selling with a robust ecommerce platform. I create secure solutions for your business.</p>
+                    <a href="https://amazon-frontend-clone-vanila.netlify.app/" class="header-btn">DEMO</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="animate__fadeIn">
+        <sectio id="contact">
+            <div class="work-heading">
+                <h1>Contact</h1>
+                <p>Ready to start your next project? Reach out to me and let's discuss your requirements.</p>
+            </div>
+            <form >
+                <input type="text" placeholder="Type Your Name">
+                <input type="email" placeholder="Type Your Email">
+                <textarea placeholder="Type Your Message Here...."></textarea>
+                <!-- <input type="submit" href="mailto:2412prakas@gmail.com" value="Continue"> -->
+                <a href="mailto:2412prakas@gmail.com">Continue</a>
+            </form>
+        </sectio>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+
+
+
+        gsap.from(".animate__fadeIn", {
+            opacity: 0,
+            y: 30,
+            stagger: 0.2,
+            duration: 4,
+            ease: "power2.out"
+        });
+    </script>
+</body>
+</html>
